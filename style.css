@@ -1,0 +1,17 @@
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+.hero {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  padding: 80px 20px;
+}
+.section {
+  padding: 60px 20px;
+}
+footer {
+  background: #20232a;
+  color: white;
+  padding: 20px 0;
+}
