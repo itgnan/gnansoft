@@ -31,7 +31,7 @@
 <body>
  <!-- Top Contact Bar -->
   <div class="top-bar text-center">
-    📞 Call: +91-8985764556 | ✉️ Email: info@GnanSoft.com
+    📞 Call: +91-8985764556 | ✉️ Email: info@GnanSoft.com, gnansoftit@gmail.com
   </div>
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -42,6 +42,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
+	    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#trainings">Trainings</a></li>
         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
@@ -52,7 +53,7 @@
 </nav>
 
 <!-- Hero Section -->
-<section class="hero">
+<section  id="home" class="hero">
   <div class="container">
     <h1 class="display-4">Welcome to GnanSoft</h1>
     <p class="lead">"Gnan" means Knowledge – Empowering through Technical Trainings & Software Services</p>
@@ -111,28 +112,30 @@
 
 <!-- Contact -->
 <section id="contact" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="section-title">Get in Touch</h2>
+  <div class="container py-5">
     <div class="row justify-content-center">
-      <div class="col-md-6">
-        <form>
-          <div class="mb-3">
-            <label for="name" class="form-label">Your Name</label>
-            <input type="text" class="form-control" id="name" required>
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Your Email</label>
-            <input type="email" class="form-control" id="email" required>
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Your Message</label>
-            <textarea class="form-control" id="message" rows="4" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary w-100">Send Message</button>
-        </form>
+      <div class="col-md-8">
+
+        <h2 class="mb-4 text-center">Contact Us</h2>
+
+        <div class="card p-4 shadow-sm">
+          <h5 class="mb-3">📬 Email</h5>
+          <p class="contact-info">
+            <i class="bi bi-envelope icon"></i>
+            <a href="mailto:info@gnansoft.com">info@gnansoft.com</a><br>
+            <i class="bi bi-envelope icon"></i>
+            <a href="mailto:gnansoftit@gmail.com">gnansoftit@gmail.com</a>
+          </p>
+
+          <h5 class="mt-4 mb-3">📞 WhatsApp</h5>
+          <p class="contact-info">
+            <i class="bi bi-whatsapp icon"></i>
+            <a href="https://wa.me/+918985764556" target="_blank">Chat with us on WhatsApp</a>
+          </p>
+          <hr>
+        </div>
       </div>
     </div>
-  </div>
 </section>
 
 <!-- Footer -->
