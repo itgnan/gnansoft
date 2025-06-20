@@ -157,29 +157,73 @@
       padding-top: 40px;
       padding-bottom: 90px;
     }
-  </style>
+  
+@media (max-width: 576px) {
+  .scrolling-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: none !important;
+    overflow-x: hidden;
+  }
+  .scrolling-wrapper .card {
+    flex: 1 1 80%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+  .scrolling-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: none !important;
+  }
+  .scrolling-wrapper .card {
+    flex: 1 1 45%;
+    margin-bottom: 1rem;
+  }
+}
+
+</style>
 </head>
 
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
-    <div class="container">
-      <a class="navbar-brand" href="#">GnanSoft</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#trainings">Trainings</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="#">GnanSoft</a>
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#trainings">Trainings</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
+<script>
+// Auto-close mobile menu on nav link click
+document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    if (navbarCollapse.classList.contains('show')) {
+      const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+      bsCollapse.hide();
+    }
+  });
+});
+</script>
 
   <!-- Hero Section -->
   <section id="home" class="hero">
@@ -235,49 +279,48 @@
   </section>
 
 
-  <!-- Trainings -->
-  <section id="trainings">
-    <div class="container" data-aos="fade-left">
-      <h2 class="section-title">Upskill with Confidence</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card shadow text-center">
-            <h5 class="card-title">🧠 .NET</h5>
-            <p class="card-text">Professional training in .NET, C#, Web APIs & microservices with real-world
-              applications.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card shadow text-center">
-            <h5 class="card-title">🌐 Angular & React</h5>
-            <p class="card-text">Master modern front-end technologies with live projects and hands-on support.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card shadow text-center">
-            <h5 class="card-title">📊 SAP FICO</h5>
-            <p class="card-text">Deep dive into SAP Financial Accounting and Controlling with industry-aligned
-              curriculum.</p>
-          </div>
+  
+<section id="trainings">
+  <div class="container" data-aos="fade-left">
+    <h2 class="section-title">Upskill with Confidence</h2>
+    <div class="row justify-content-center g-4">
+      <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+        <div class="card shadow text-center w-100">
+          <h5 class="card-title">🧠 .NET</h5>
+          <p class="card-text">Gain in-depth knowledge of .NET technologies including C#, Web APIs, and microservices through hands-on training and projects.</p>
         </div>
       </div>
-      <div class="row g-4 training-gap">
-        <div class="col-md-4">
-          <div class="card shadow text-center">
-            <h5 class="card-title">🖥️ Job Support</h5>
-            <p class="card-text">On-demand technical assistance for real-time issues in your project environment.</p>
-          </div>
+      <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+        <div class="card shadow text-center w-100">
+          <h5 class="card-title">🌐 Angular & React</h5>
+          <p class="card-text">Learn modern frontend frameworks like Angular and React by working on real-world applications guided by expert mentors.</p>
         </div>
-        <div class="col-md-4">
-          <div class="card shadow text-center">
-            <h5 class="card-title">💻 Mock Interviews</h5>
-            <p class="card-text">Simulated interviews to help you build confidence and prepare for real job interviews.
-            </p>
-          </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+        <div class="card shadow text-center w-100">
+          <h5 class="card-title">📊 SAP FICO</h5>
+          <p class="card-text">Master SAP Financial Accounting and Controlling modules with a curriculum designed for business-oriented technical professionals.</p>
         </div>
       </div>
     </div>
-  </section>
+    <div class="row justify-content-center g-4 training-gap mt-2">
+      <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+        <div class="card shadow text-center w-100">
+          <h5 class="card-title">🖥️ Job Support</h5>
+          <p class="card-text">Receive expert technical assistance during live project implementation, debugging, and system deployment challenges.</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+        <div class="card shadow text-center w-100">
+          <h5 class="card-title">💻 Mock Interviews</h5>
+          <p class="card-text">Build interview confidence with our simulated technical interview sessions and personalized feedback from experienced professionals.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
   <!-- Services -->
   <section id="services" class="bg-white">
