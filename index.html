@@ -1,414 +1,783 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>GnanSoft - IT Trainings, Consultancy & Software Services</title>
 
-<meta name="description" content="GnanSoft offers top 10 IT trainings and best online training in Dotnet, Java, SAP, Angular, and React. We are a leading consultancy firm providing freelance developers, corporate training, bug bounty testing, and data entry services for companies.">
+  <title>GnanSoft – IT Training, Certification Support & Job Support</title>
 
-<meta name="keywords" content="Top 10 IT Trainings, Best Online Training, Dotnet Training, Java Training, SAP FICO, Angular Training, React Training, IT Consultancy Services, Freelance Developer, Software Services, Corporate Training, Bug Bounty Testing, Data Entry Services, Product Testing Partner, Software Development, Technical Training Institute, GnanSoft">
+  <!-- SEO -->
+  <meta name="description" content="GnanSoft provides industry-focused IT training (.NET, Java, Angular, React), certification support, job support, interview readiness, and IT consultancy. Learn faster. Get certified. Get hired." />
+  <meta name="keywords" content="GnanSoft, IT training, .NET training, Java training, Angular training, React training, certification support, job support, interview readiness, corporate training, IT consultancy" />
+  <meta name="author" content="GnanSoft" />
+  <meta name="robots" content="index, follow" />
 
-<meta name="author" content="GnanSoft">
+  <!-- Open Graph -->
+  <meta property="og:title" content="GnanSoft – IT Training, Certification Support & Job Support" />
+  <meta property="og:description" content="Industry-focused training and end-to-end career support: certification, job support, interview readiness, and consultancy." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.gnansoft.com/" />
+  <meta property="og:image" content="https://www.gnansoft.com/assets/gnansoft-thumbnail.jpg" />
 
-<meta property="og:title" content="GnanSoft - Top Online IT Trainings & Consultancy">
-<meta property="og:description" content="Join GnanSoft for top-rated IT training in Dotnet, Java, SAP, Angular, and React. We also offer consultancy, freelance support, and corporate IT services.">
-<meta property="og:url" content="https://www.gnansoft.com">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://www.gnansoft.com/assets/gnansoft-thumbnail.jpg"> 
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-<meta name="robots" content="index, follow">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
 
-
-  
-  <link rel="icon" type="image/png" href="gnansoft_logo_128x128.png">
-  <style>
-    .navbar-brand::before {
-      content: '';
-      display: inline-block;
-      background-image: url('logo/gnansoft_logo_64x64.png');
-      background-size: contain;
-      width: 32px;
-      height: 32px;
-      margin-right: 8px;
-      vertical-align: middle;
-    }
-  </style>
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-  <!-- AOS Animations -->
+  <!-- AOS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
 
+  <!-- Favicon (keep your existing file path if available) -->
+  <link rel="icon" type="image/png" href="gnansoft_logo_128x128.png" />
+
+  <!-- Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "GnanSoft",
+    "url": "https://www.gnansoft.com/",
+    "email": "gnansoftit@gmail.com",
+    "telephone": "+91-8985764556",
+    "description": "Industry-focused IT training and career support including certification assistance, job support, interview readiness, and IT consultancy."
+  }
+  </script>
+
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f5f7fa;
-      scroll-behavior: smooth;
-      line-height: 1.6;
+    /* =========================
+       WCAG-Friendly Theme Tokens
+       ========================= */
+    :root{
+      --font: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+      /* Light theme */
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --surface-2: #F1F5F9;
+      --text: #0F172A;
+      --text-muted: #334155;      /* higher contrast than typical muted */
+      --border: #CBD5E1;
+
+      --primary: #1D4ED8;         /* deep blue for WCAG contrast */
+      --primary-2: #0EA5E9;       /* sky accent */
+      --success: #15803D;         /* deeper green for WCAG */
+      --warning: #C2410C;         /* deeper orange for WCAG */
+      --focus: #F59E0B;
+
+      --shadow: 0 12px 28px rgba(2, 6, 23, 0.12);
+      --shadow-hover: 0 18px 40px rgba(2, 6, 23, 0.18);
+      --radius: 18px;
     }
 
-    .navbar-brand {
-      font-weight: 700;
-      font-size: 1.5rem;
+    /* Dark theme */
+    html[data-theme="dark"]{
+      --bg: #0B1220;
+      --surface: #0F172A;
+      --surface-2: #111C33;
+      --text: #E5E7EB;
+      --text-muted: #CBD5E1;
+      --border: #24324B;
+
+      --primary: #60A5FA;
+      --primary-2: #38BDF8;
+      --success: #22C55E;
+      --warning: #FB923C;
+      --focus: #FBBF24;
+
+      --shadow: 0 14px 34px rgba(0,0,0,0.45);
+      --shadow-hover: 0 18px 46px rgba(0,0,0,0.55);
     }
 
-    .hero {
-      background: linear-gradient(90deg, #4e54c8, #8f94fb);
-      color: white;
-      padding: 20px 10px;
-      text-align: center;
+    body{
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      letter-spacing: 0.1px;
     }
 
-    .section-title {
-      margin-bottom: 25px;
-      font-weight: 700;
-      text-align: center;
-      color: #343a40;
+    /* Respect users who prefer reduced motion */
+    @media (prefers-reduced-motion: reduce){
+      * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
     }
 
-    .card {
-      border-radius: 16px;
-      transition: all 0.3s ease-in-out;
-      padding: 30px;
+    /* =========================
+       Navbar
+       ========================= */
+    .navbar{
+      background: linear-gradient(90deg, var(--primary), var(--primary-2));
+      box-shadow: 0 10px 24px rgba(2, 6, 23, 0.14);
+    }
+    .navbar-brand{
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+    .navbar .nav-link{
+      color: rgba(255,255,255,0.92) !important;
+      font-weight: 500;
+    }
+    .navbar .nav-link:hover,
+    .navbar .nav-link:focus{
+      color: #ffffff !important;
+      text-decoration: underline;
+      text-underline-offset: 6px;
     }
 
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+    /* Focus ring (WCAG) */
+    :focus-visible{
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+      border-radius: 10px;
     }
 
-    .contact-info a {
-      text-decoration: none;
-      color: #0d6efd;
-    }
-
-    .btn-custom {
-      background-color: #4e54c8;
-      color: white;
-      padding: 12px 30px;
-      font-weight: 600;
-      border-radius: 50px;
-    }
-
-    footer {
-      background: #222;
-      color: #ccc;
-      padding: 25px 0;
-    }
-
-    section {
-      padding-top: 80px;
-      padding-bottom: 80px;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .scrolling-wrapper {
-      overflow-x: hidden;
+    /* =========================
+       Hero (Landing Version)
+       ========================= */
+    .hero{
       position: relative;
-      white-space: nowrap;
-      scroll-behavior: smooth;
-      animation: scroll-left 30s linear infinite;
-      -ms-overflow-style: none;
-      scrollbar-width: none;
+      padding: 84px 0 48px;
+      color: #fff;
+      background:
+        radial-gradient(1200px 500px at 20% 10%, rgba(255,255,255,0.18), transparent 55%),
+        radial-gradient(900px 450px at 85% 25%, rgba(255,255,255,0.15), transparent 55%),
+        linear-gradient(135deg, var(--primary), var(--primary-2));
+      overflow: hidden;
     }
-
-    .scrolling-wrapper::-webkit-scrollbar {
-      display: none;
+    .hero h1{
+      font-weight: 800;
+      line-height: 1.1;
     }
-
-    @keyframes scroll-left {
-      0% {
-        transform: translateX(0);
-      }
-
-      100% {
-        transform: translateX(-50%);
-      }
+    .hero .lead{
+      color: rgba(255,255,255,0.92);
+      max-width: 920px;
+      margin-inline: auto;
     }
-
-    .scrolling-wrapper:hover {
-      animation-play-state: paused;
-    }
-
-    .card {
-      min-width: 250px;
-      margin-right: 1rem;
-    }
-
-    .training-gap {
-      margin-top: 10px;
-    }
-
-    .scrolling-wrapper {
+    .hero-badges{
       display: flex;
-      overflow-x: auto;
-      white-space: nowrap;
-      scroll-behavior: smooth;
-      animation: scroll-left 30s linear infinite;
-      padding: 1rem 0;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .badge-pill{
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.26);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      backdrop-filter: blur(8px);
     }
 
-    .card {
-      flex: 0 0 auto;
-      width: 320px;
-      /* or 350px for more space */
-      margin-right: 1rem;
-      border-radius: 16px;
-      padding: 20px;
-      white-space: normal;
-      /* Ensures text wraps */
+    /* =========================
+       Buttons
+       ========================= */
+    .btn-primary-gn{
+      background: var(--success);
+      border: none;
+      color: #fff;
+      font-weight: 700;
+      border-radius: 999px;
+      padding: 12px 22px;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+    }
+    .btn-primary-gn:hover{
+      filter: brightness(0.95);
+      transform: translateY(-1px);
+    }
+    .btn-secondary-gn{
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.35);
+      color: #fff;
+      font-weight: 700;
+      border-radius: 999px;
+      padding: 12px 22px;
+    }
+    .btn-secondary-gn:hover{ background: rgba(255,255,255,0.20); }
+
+    /* =========================
+       Sections & Cards
+       ========================= */
+    section{ padding: 64px 0; }
+    .section-title{
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+    .section-subtitle{
+      color: var(--text-muted);
+      max-width: 900px;
+      margin: 0 auto 34px;
+    }
+    .card-clean{
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .card-clean:hover{
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+    }
+    .pill{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+    .icon-tile{
+      width: 46px; height: 46px;
+      border-radius: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      font-size: 1.25rem;
     }
 
-    @media (max-width: 768px) {
-      .card {
-        width: 260px;
-      }
+    /* =========================
+       Stats Counter
+       ========================= */
+    .stats-wrap{
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px 16px;
+    }
+    .stat-number{
+      font-size: 2rem;
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--text);
+    }
+    .stat-label{
+      color: var(--text-muted);
+      font-weight: 600;
     }
 
-    section[id] {
-      scroll-margin-top: 60px;
+    /* =========================
+       Video
+       ========================= */
+    .video-box{
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      background: var(--surface);
     }
 
-    section {
-      padding-top: 40px;
-      padding-bottom: 90px;
+    /* =========================
+       Floating WhatsApp Button
+       ========================= */
+    .wa-float{
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 9999;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 999px;
+      background: #16A34A;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 800;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.26);
     }
-  
-@media (max-width: 576px) {
-  .scrolling-wrapper {
-    flex-wrap: wrap;
-    justify-content: center;
-    animation: none !important;
-    overflow-x: hidden;
-  }
-  .scrolling-wrapper .card {
-    flex: 1 1 80%;
-    margin-bottom: 1rem;
-  }
-}
+    .wa-float:hover{ filter: brightness(0.96); color: #fff; }
+    .wa-float .wa-icon{
+      width: 40px; height: 40px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.18);
+      font-size: 1.15rem;
+    }
+    @media (max-width: 576px){
+      .wa-float span{ display:none; } /* keep icon only on small screens */
+      .wa-float{ padding: 12px; }
+    }
 
-@media (min-width: 577px) and (max-width: 991px) {
-  .scrolling-wrapper {
-    flex-wrap: wrap;
-    justify-content: center;
-    animation: none !important;
-  }
-  .scrolling-wrapper .card {
-    flex: 1 1 45%;
-    margin-bottom: 1rem;
-  }
-}
+    /* Footer */
+    footer{
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 22px 0;
+    }
 
-</style>
+    /* Small helper */
+    .text-muted-gn{ color: var(--text-muted) !important; }
+  </style>
 </head>
 
 <body>
-
-  <!-- Navbar -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
-  <div class="container">
-    <a class="navbar-brand" href="#">GnanSoft</a>
-    <button class="navbar-toggler" type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#trainings">Trainings</a></li>
-        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<script>
-// Auto-close mobile menu on nav link click
-document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-  link.addEventListener('click', () => {
-    const navbarCollapse = document.querySelector('.navbar-collapse');
-    if (navbarCollapse.classList.contains('show')) {
-      const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-      bsCollapse.hide();
-    }
-  });
-});
-</script>
-
-  <!-- Hero Section -->
-<section id="home" class="hero py-6">
-  <div class="container text-center" data-aos="fade-up">
-    <h1 class="display-6 fw-bold">Empowering Through Knowledge & Technology</h1>
-    <p class="mt-4 lead">
-      GnanSoft empowers students and professionals through industry-driven training in .NET, Java, Angular, and React. In addition, we offer end-to-end IT consultancy, including corporate training, job support, certification assistance, interview readiness, and freelance development solutions.
-    </p>
-    <a href="#contact" class="btn btn-custom mt-4">Get in Touch</a>
-  </div>
-</section>
-
-
-  <!-- About -->
-  <section id="about" class="bg-light">
-    <div class="container" data-aos="fade-right">
-      <h2 class="section-title">Who We Empower</h2>
-      <div class="row align-items-center">
-
-        <!-- Left: Text Content (70%) -->
-        <div class="col-md-7">
-          <p class="fs-6">
-            <strong>GnanSoft</strong> blends <strong>Gnanam (Knowledge)</strong> with cutting-edge <strong>Software
-              expertise</strong> to empower individuals and businesses through:
-          </p>
-          <ul class="list-unstyled fs-8">
-            <li>✔️ <strong>Interview Readiness</strong></li>
-			<li>✔️ <strong>Certification Assistance</strong></li>
-			<li>✔️ <strong>Real-time Job Support</strong></li>
-			<li>✔️ <strong>Industry-focused Training</strong> in .NET, Java, Angular, React & more</li>
-          </ul>
-          <p class="fs-5">
-            Whether you're building skills or scaling your tech operations—<strong>GnanSoft is your trusted partner in
-              digital growth.</strong>
-          </p>
-        </div>
-
-        <!-- Right: YouTube Video (30%) -->
-        <div class="col-md-5">
-          <!-- Tagline -->
-          <div class="mb-3 p-3 bg-light border-start border-3 border-primary rounded">
-            <p class="fw-semibold text-dark mb-0">
-              🎯 Empowering Everyone – Beginners to Experts
-            </p>
-          </div>
-
-          <!-- Video -->
-          <div class="ratio ratio-16x9 shadow rounded border border-secondary">
-            <iframe  src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="GnanSoft Intro Video"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 6px;"></iframe>
-		  </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  
-<section id="trainings">
-  <div class="container" data-aos="fade-left">
-	<h2 class="section-title">Upskill with Confidence</h2>
-	<div class="row justify-content-center g-4">
-	  <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-		<div class="card shadow text-center w-100">
-		  <h5 class="card-title">☕ Java</h5>
-		  <p class="card-text">Master Java development with training in Core Java, Spring Boot, REST APIs, and real-world enterprise project implementation.</p>
-		</div>
-	  </div>
-	  <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-		<div class="card shadow text-center w-100">
-		  <h5 class="card-title">🧠 .NET</h5>
-		  <p class="card-text">Gain in-depth knowledge of .NET technologies including C#, Web APIs, and microservices through hands-on training and projects.</p>
-		</div>
-	  </div>
-	  <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-		<div class="card shadow text-center w-100">
-		  <h5 class="card-title">🌐 Angular & React</h5>
-		  <p class="card-text">Learn modern frontend frameworks like Angular and React by working on real-world applications guided by expert mentors.</p>
-		</div>
-	  </div>
-	</div>
-  </div>
-</section>
-
-
-
-  <!-- Services -->
-  <section id="services" class="bg-white">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
-      <h2 class="section-title text-center mb-5">Smart Solutions We Offer</h2>
-      <div class="scrolling-wrapper d-flex gap-4">
-        <div class="card text-white text-center" style="background-color: #f97316;">
-          <div class="card-body">
-            <h5>🖥️ Job Support</h5>
-            <p>Receive expert technical assistance during live project implementation, debugging, and system deployment challenges.</p>
+      <a class="navbar-brand d-flex align-items-center gap-2 text-white" 
+   href="#home" 
+   aria-label="GnanSoft Home">
+  
+  <!-- Logo Image -->
+  <img src="logo/gnansoft_logo_64x64.png" 
+       alt="GnanSoft Logo" 
+       height="40"
+       width="40"
+       class="rounded">
+
+  <!-- Brand Text -->
+  <div class="d-flex flex-column lh-sm">
+    <span class="fw-bold fs-5">GnanSoft</span>
+    <small class="fw-semibold" style="font-size: 0.7rem; opacity: 0.9;">
+      A Bridge to Tech Success
+    </small>
+  </div>
+</a>
+
+
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#why">Why GnanSoft</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#trainings">Trainings</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+          <!-- Dark Mode Toggle -->
+          <li class="nav-item ms-lg-2">
+            <button id="themeToggle"
+                    class="btn btn-sm btn-light rounded-pill fw-bold px-3"
+                    type="button"
+                    aria-label="Toggle dark mode"
+                    aria-pressed="false">
+              🌙 Dark
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO (Landing page version for ads) -->
+  <header id="home" class="hero">
+    <div class="container text-center" data-aos="fade-up">
+      <h1 class="display-5 mb-3">Empowering Careers Through Knowledge & Technology</h1>
+
+      <p class="lead mb-4">
+        Industry-focused training and career support designed for real-world success.
+        Learn faster, build confidence, and move to the next level.
+      </p>
+
+      <div class="hero-badges" aria-label="Key offerings">
+        <span class="badge-pill">🎓 Certification Support</span>
+        <span class="badge-pill">💼 Job Support</span>
+        <span class="badge-pill">🎯 Interview Readiness</span>
+        <span class="badge-pill">🏢 Corporate Training</span>
+      </div>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+        <a class="btn btn-primary-gn" href="#contact">Get Free Consultation</a>
+        <a class="btn btn-secondary-gn" href="https://wa.me/918985764556" target="_blank" rel="noopener">
+          WhatsApp Now
+        </a>
+      </div>
+
+      <p class="mt-4 mb-0" style="color: rgba(255,255,255,0.92); font-weight: 600;">
+        Technologies: <strong>.NET</strong> • <strong>Java</strong> • <strong>Angular</strong> • <strong>React</strong> • <strong>Azure</strong> • <strong>AWS</strong>
+      </p>
+    </div>
+  </header>
+
+  <!-- STATS (Animated Counters) -->
+  <section aria-label="GnanSoft impact statistics">
+    <div class="container" data-aos="fade-up">
+      <div class="stats-wrap">
+        <div class="row text-center g-4">
+          <div class="col-6 col-lg-3">
+            <div class="stat-number counter" data-target="5000" data-suffix="+">0</div>
+            <div class="stat-label">Learners Trained</div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-number counter" data-target="500" data-suffix="+">0</div>
+            <div class="stat-label">Interview Sessions</div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-number counter" data-target="100" data-suffix="+">0</div>
+            <div class="stat-label">Certifications Guided</div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-number counter" data-target="24" data-suffix="/7">0</div>
+            <div class="stat-label">Support Availability</div>
           </div>
         </div>
-		
-		<div class="card bg-light text-dark text-center border">
-          <div class="card-body">
-            <h5>🎓 Certification Assistance</h5>
-            <p>We provide end-to-end support for certification programs including Azure, AWS, Java, .NET, and more — from exam registration and preparation to guided support until you successfully earn your certification.</p>
+        <p class="text-center mt-3 mb-0 text-muted-gn">
+          Numbers are indicative and can be updated based on your latest outcomes.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY GNANSOFT -->
+  <section id="why" style="background: var(--surface-2);">
+    <div class="container" data-aos="fade-right">
+      <h2 class="section-title text-center">Why Choose GnanSoft</h2>
+      <p class="section-subtitle text-center">
+        A practical, outcome-driven approach: learn with real examples, get guidance through challenges,
+        and build confidence for interviews and certifications.
+      </p>
+
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-7">
+          <div class="card-clean p-4 h-100">
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="pill">✅ Practical Training</span>
+              <span class="pill">✅ Real-time Support</span>
+              <span class="pill">✅ Career Focused</span>
+            </div>
+
+            <h3 class="h5 fw-bold mb-3">What you get</h3>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="d-flex gap-3">
+                  <div class="icon-tile" aria-hidden="true">🎓</div>
+                  <div>
+                    <div class="fw-bold">Industry Training</div>
+                    <div class="text-muted-gn">Hands-on learning in .NET, Java, Angular, and React.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex gap-3">
+                  <div class="icon-tile" aria-hidden="true">📜</div>
+                  <div>
+                    <div class="fw-bold">Certification Support</div>
+                    <div class="text-muted-gn">Guidance from registration to final certification success.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex gap-3">
+                  <div class="icon-tile" aria-hidden="true">💼</div>
+                  <div>
+                    <div class="fw-bold">Job Support</div>
+                    <div class="text-muted-gn">Assistance with real projects, debugging, and deployments.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex gap-3">
+                  <div class="icon-tile" aria-hidden="true">🎯</div>
+                  <div>
+                    <div class="fw-bold">Interview Readiness</div>
+                    <div class="text-muted-gn">Mock interviews and focused feedback to improve results.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a class="btn btn-primary-gn" href="#contact">Talk to an Expert</a>
+              <a class="btn btn-outline-primary rounded-pill fw-bold px-4"
+                 style="border-color: var(--primary); color: var(--text);"
+                 href="#services">
+                View Services
+              </a>
+            </div>
           </div>
         </div>
 
-        <div class="card text-white text-center" style="background-color: #22c55e;">
-          <div class="card-body" >
-            <h5>💻 Interview Readiness</h5>
-            <p>Build interview confidence with our simulated technical interview sessions and personalized feedback from experienced professionals.</p>
+        <div class="col-lg-5">
+          <div class="video-box p-2 h-100">
+            <div class="ratio ratio-16x9 rounded">
+              <!-- Use a known embeddable video. Replace VIDEO_ID with your embeddable ID when ready. -->
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"
+                title="GnanSoft Intro Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+
+            <div class="p-3">
+              <div class="fw-bold">Quick Intro</div>
+              <div class="text-muted-gn">
+                If your original YouTube video shows “Error 153”, it means embedding is disabled by the video owner.
+                Upload/choose a video that allows embedding, then replace the embed ID here.
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title text-center">Smart Solutions We Offer</h2>
+      <p class="section-subtitle text-center">
+        Clear, structured support services that help you learn, certify, and perform with confidence.
+      </p>
 
-  <!-- Contact -->
-  <!-- Contact -->
-  <section id="contact" class="bg-light">
-    <div class="container py-5" data-aos="fade-right">
-      <h2 class="section-title text-center mb-5">Let’s Connect</h2>
-      <div class="row justify-content-center g-4">
-
-        <!-- Email Section -->
-        <div class="col-md-6 text-center ">
-          <div class="p-4 bg-white h-100 rounded-4 shadow-sm">
-            <h5 class="fw-bold mb-3">📧 Email</h5>
-            <p>
-              <a href="mailto:gnansoftit@gmail.com" class="text-decoration-none text-primary">gnansoftit@gmail.com</a>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card-clean p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="icon-tile" aria-hidden="true">💼</div>
+              <h3 class="h5 fw-bold mb-0">Job Support</h3>
+            </div>
+            <p class="mb-0 text-muted-gn">
+              Expert assistance during live project implementation, debugging, releases, and production support.
             </p>
           </div>
         </div>
 
-        <!-- WhatsApp Section -->
-        <div class="col-md-6 text-center text-md-start">
-          <div
-            class="p-4 bg-white h-100 rounded-4 shadow-sm d-flex flex-column justify-content-center align-items-center">
-            <h5 class="fw-bold mb-3">📱 WhatsApp</h5>
-            <a href="https://wa.me/+918985764556" target="_blank"
-              class="btn btn-success px-4 py-2 rounded-pill fw-semibold shadow-sm">
+        <div class="col-md-4">
+          <div class="card-clean p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="icon-tile" aria-hidden="true">🎓</div>
+              <h3 class="h5 fw-bold mb-0">Certification Support</h3>
+            </div>
+            <p class="mb-0 text-muted-gn">
+              End-to-end guidance for <strong>Azure, AWS, Java, .NET</strong> and more—from exam registration to final success.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card-clean p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="icon-tile" aria-hidden="true">🎯</div>
+              <h3 class="h5 fw-bold mb-0">Interview Readiness</h3>
+            </div>
+            <p class="mb-0 text-muted-gn">
+              Mock interviews, system design guidance, and tailored feedback to improve your performance and confidence.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA strip -->
+      <div class="card-clean p-4 mt-4" style="background: linear-gradient(135deg, var(--surface), var(--surface-2));">
+        <div class="row align-items-center g-3">
+          <div class="col-lg-8">
+            <div class="fw-bold h5 mb-1">Need help choosing the right path?</div>
+            <div class="text-muted-gn">
+              Tell us your goal (training / certification / job support) and we’ll recommend the best plan.
+            </div>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a class="btn btn-primary-gn" href="#contact">Get a Free Plan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAININGS -->
+  <section id="trainings" style="background: var(--surface-2);">
+    <div class="container" data-aos="fade-left">
+      <h2 class="section-title text-center">Upskill with Confidence</h2>
+      <p class="section-subtitle text-center">
+        Practical training with real examples, guided learning, and a clear path to interviews and certifications.
+      </p>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-12 col-md-4">
+          <div class="card-clean p-4 h-100 text-center">
+            <div class="icon-tile mx-auto mb-3" aria-hidden="true">☕</div>
+            <h3 class="h5 fw-bold">Java</h3>
+            <p class="text-muted-gn mb-0">
+              Core Java, Spring Boot, REST APIs, and enterprise-level application development.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="card-clean p-4 h-100 text-center">
+            <div class="icon-tile mx-auto mb-3" aria-hidden="true">🧠</div>
+            <h3 class="h5 fw-bold">.NET</h3>
+            <p class="text-muted-gn mb-0">
+              C#, Web APIs, microservices, clean architecture fundamentals, and production-ready patterns.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="card-clean p-4 h-100 text-center">
+            <div class="icon-tile mx-auto mb-3" aria-hidden="true">🌐</div>
+            <h3 class="h5 fw-bold">Angular & React</h3>
+            <p class="text-muted-gn mb-0">
+              Build modern UIs with best practices, component patterns, and real-world application workflows.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT (Landing CTA) -->
+  <section id="contact">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title text-center">Let’s Connect</h2>
+      <p class="section-subtitle text-center">
+        Share your requirement and we’ll respond with the best approach for your goal.
+      </p>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-5">
+          <div class="card-clean p-4 h-100 text-center">
+            <h3 class="h5 fw-bold mb-3">📧 Email</h3>
+            <p class="mb-1 text-muted-gn">Write to us and we’ll respond quickly.</p>
+            <a class="fw-bold" href="mailto:gnansoftit@gmail.com">gnansoftit@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-5">
+          <div class="card-clean p-4 h-100 text-center">
+            <h3 class="h5 fw-bold mb-3">📱 WhatsApp</h3>
+            <p class="mb-3 text-muted-gn">Chat for training, certification, or job support.</p>
+            <a class="btn btn-primary-gn" href="https://wa.me/918985764556" target="_blank" rel="noopener">
               +91 8985764556 – Chat Now
             </a>
           </div>
         </div>
-
       </div>
+
+      <!-- Micro lead capture (simple, ad-friendly) -->
+      <div class="card-clean p-4 mt-4">
+        <div class="row align-items-center g-3">
+          <div class="col-lg-8">
+            <div class="fw-bold h5 mb-1">Want a callback?</div>
+            <div class="text-muted-gn mb-0">
+              Click WhatsApp and send: <strong>“Hi GnanSoft, I need support for &lt;Training/Certification/Job Support&gt;”</strong>
+            </div>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a class="btn btn-primary-gn" href="https://wa.me/918985764556" target="_blank" rel="noopener">
+              Request Callback
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-
-  <!-- Footer -->
-  <footer class="text-center text-white">
+  <!-- FOOTER -->
+  <footer class="text-center">
     <div class="container">
-      <p class="mb-0">&copy; 2026 GnanSoft. All rights reserved.</p>
+      <div class="fw-bold">© 2026 GnanSoft</div>
+      <div class="text-muted-gn">IT Training • Certification Support • Job Support • Interview Readiness</div>
     </div>
   </footer>
 
-  <!-- JS Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>AOS.init();</script>
-</body>
+  <!-- Floating WhatsApp Button -->
+  <a class="wa-float" href="https://wa.me/918985764556" target="_blank" rel="noopener"
+     aria-label="Chat with GnanSoft on WhatsApp">
+    <span class="wa-icon" aria-hidden="true">🟢</span>
+    <span>WhatsApp</span>
+  </a>
 
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script>
+    // AOS animations
+    AOS.init({ once: true, duration: 650, easing: "ease-out" });
+
+    // Auto-close mobile menu when clicking a link
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        if (navbarCollapse.classList.contains('show')) {
+          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+          if (bsCollapse) bsCollapse.hide();
+        }
+      });
+    });
+
+    // =========================
+    // Dark Mode Toggle (persist)
+    // =========================
+    const themeToggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+
+    function setTheme(theme) {
+      root.setAttribute('data-theme', theme);
+      localStorage.setItem('gn_theme', theme);
+      const isDark = theme === 'dark';
+      themeToggle.setAttribute('aria-pressed', String(isDark));
+      themeToggle.textContent = isDark ? '☀️ Light' : '🌙 Dark';
+    }
+
+    const savedTheme = localStorage.getItem('gn_theme');
+    if (savedTheme === 'dark' || savedTheme === 'light') {
+      setTheme(savedTheme);
+    } else {
+      // default: respect system preference
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(prefersDark ? 'dark' : 'light');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme');
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    // =========================
+    // Animated Stats Counters
+    // =========================
+    const counters = document.querySelectorAll('.counter');
+
+    function animateCounter(el) {
+      const target = parseInt(el.getAttribute('data-target'), 10) || 0;
+      const suffix = el.getAttribute('data-suffix') || '';
+      const duration = 1200; // ms
+      const startTime = performance.now();
+
+      function tick(now) {
+        const progress = Math.min((now - startTime) / duration, 1);
+        // Ease out
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.floor(eased * target);
+        el.textContent = current.toLocaleString() + suffix;
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.25 });
+
+    counters.forEach(c => observer.observe(c));
+  </script>
+</body>
 </html>
