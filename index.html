@@ -105,31 +105,34 @@
     /* =========================
        Navbar
        ========================= */
-    .navbar{
-      background: linear-gradient(90deg, var(--primary), var(--primary-2));
-      box-shadow: 0 10px 24px rgba(2, 6, 23, 0.14);
-    }
-    .navbar-brand{
-      font-weight: 800;
-      letter-spacing: 0.2px;
-    }
-    .navbar .nav-link{
-      color: rgba(255,255,255,0.92) !important;
-      font-weight: 500;
-    }
-    .navbar .nav-link:hover,
-    .navbar .nav-link:focus{
-      color: #ffffff !important;
-      text-decoration: underline;
-      text-underline-offset: 6px;
-    }
+    .navbar {
+  background: linear-gradient(
+    90deg,
+    #0f3cc9 0%,   /* Dark Blue */
+    #1e88e5 60%,  /* Medium Blue */
+    #2196f3 100%  /* Light Blue */
+  );
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+}
 
-    /* Focus ring (WCAG) */
-    :focus-visible{
-      outline: 3px solid var(--focus);
-      outline-offset: 3px;
-      border-radius: 10px;
-    }
+.navbar-brand {
+  color: #ffffff !important;
+  font-weight: 800;
+}
+
+.navbar-brand small {
+  color: #e3f2fd;
+  font-weight: 500;
+}
+
+.nav-link {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  color: #ffeb3b !important; /* Yellow hover highlight */
+}
 
     /* =========================
        Hero (Landing Version)
@@ -511,7 +514,7 @@
             <div class="ratio ratio-16x9 rounded">
               <!-- Use a known embeddable video. Replace VIDEO_ID with your embeddable ID when ready. -->
               <iframe
-                src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"
+                src="https://www.youtube-nocookie.com/embed/aFNFVANQ1aY"
                 title="GnanSoft Intro Video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
@@ -521,8 +524,7 @@
             <div class="p-3">
               <div class="fw-bold">Quick Intro</div>
               <div class="text-muted-gn">
-                If your original YouTube video shows “Error 153”, it means embedding is disabled by the video owner.
-                Upload/choose a video that allows embedding, then replace the embed ID here.
+                GnanSoft is your bridge to tech success—empowering students and professionals with industry-focused training, certification guidance, and real-time job support. We help you learn practical skills, gain confidence, and move forward in your tech career.
               </div>
             </div>
           </div>
