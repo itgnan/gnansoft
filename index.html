@@ -7,8 +7,8 @@
   <title>GnanSoft – IT Training, Certification Support & Job Support</title>
 
   <!-- SEO -->
-  <meta name="description" content="GnanSoft provides industry-focused IT training (.NET, Java, Angular, React), certification support, job support, interview readiness, and IT consultancy. Learn faster. Get certified. Get hired." />
-  <meta name="keywords" content="GnanSoft, IT training, .NET training, Java training, Angular training, React training, certification support, job support, interview readiness, corporate training, IT consultancy" />
+  <meta name="description" content="GnanSoft provides industry-focused IT training (.NET, Angular, React), certification support, job support, interview readiness, and IT consultancy. Learn faster. Get certified. Get hired." />
+  <meta name="keywords" content="GnanSoft, IT training, .NET training, Angular training, React training, certification support, job support, interview readiness, corporate training, IT consultancy" />
   <meta name="author" content="GnanSoft" />
   <meta name="robots" content="index, follow" />
 
@@ -331,6 +331,37 @@
   margin-top: 30px;
   margin-bottom: 40px;
 }
+
+/* =========================
+   Stats Animation
+   ========================= */
+
+.stat-box{
+  padding:20px;
+  border-radius:14px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+  transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-box:hover{
+  transform:translateY(-6px) scale(1.03);
+  box-shadow:0 18px 40px rgba(0,0,0,0.18);
+}
+
+.stat-number{
+  font-size:2rem;
+  font-weight:900;
+  animation:pulseNumber 2s infinite;
+}
+
+@keyframes pulseNumber{
+  0%{ transform:scale(1);}
+  50%{ transform:scale(1.08);}
+  100%{ transform:scale(1);}
+}
+
   </style>
 </head>
 
@@ -411,38 +442,55 @@
           WhatsApp Now
         </a>
       </div>
-
+	  
       <p class="mt-4 mb-0" style="color: rgba(255,255,255,0.92); font-weight: 600;">
-        Technologies: <strong>.NET</strong> • <strong>Java</strong> • <strong>Angular</strong> • <strong>React</strong> • <strong>Azure</strong> • <strong>AWS</strong>
+        Technologies: <strong>.NET</strong> • <strong>Angular</strong> • <strong>React</strong> • <strong>Azure</strong> • <strong>AWS</strong>
       </p>
     </div>
   </header>
 
   <!-- STATS (Animated Counters) -->
-  <section aria-label="GnanSoft impact statistics">
-    <div class="container" data-aos="fade-up">
-      <div class="stats-wrap">
-        <div class="row text-center g-4">
-          <div class="col-6 col-lg-3">
-            <div class="stat-number counter" data-target="5000" data-suffix="+">0</div>
-            <div class="stat-label">Learners Trained</div>
-          </div>
-          <div class="col-6 col-lg-3">
-            <div class="stat-number counter" data-target="500" data-suffix="+">0</div>
-            <div class="stat-label">Interview Sessions</div>
-          </div>
-          <div class="col-6 col-lg-3">
-            <div class="stat-number counter" data-target="100" data-suffix="+">0</div>
-            <div class="stat-label">Certifications Guided</div>
-          </div>
-          <div class="col-6 col-lg-3">
-            <div class="stat-number counter" data-target="24" data-suffix="/7">0</div>
-            <div class="stat-label">Support Availability</div>
-          </div>
-        </div>
-        <p class="text-center mt-3 mb-0 text-muted-gn">
-          Numbers are indicative and can be updated based on your latest outcomes.
-        </p>
+		<section aria-label="GnanSoft impact statistics">
+		<div class="container" data-aos="fade-up">
+		  <div class="stats-wrap">
+			
+		<div class="row text-center g-4">
+		<div class="col-6 col-lg-3">
+		<div class="stat-box">
+		  <div id="visitCounter" class="stat-number">1000</div>
+		  <div class="stat-label">Site Visits</div>
+		</div>
+		</div>
+
+		<div class="col-6 col-lg-3">
+		<div class="stat-box">
+		  <div class="stat-number counter" data-target="200" data-suffix="+">0</div>
+		  <div class="stat-label">Learners Trained</div>
+		</div>
+		</div>
+
+		<div class="col-6 col-lg-3">
+		<div class="stat-box">
+		  <div class="stat-number counter" data-target="100" data-suffix="+">0</div>
+		  <div class="stat-label">Interview Sessions</div>
+		</div>
+		</div>
+
+		<div class="col-6 col-lg-3">
+		<div class="stat-box">
+		  <div class="stat-number counter" data-target="50" data-suffix="+">0</div>
+		  <div class="stat-label">Certifications Guided</div>
+		</div>
+		</div>
+
+		<div class="col-6 col-lg-3">
+		<div class="stat-box">
+		  <div class="stat-number counter" data-target="24" data-suffix="/7">0</div>
+		  <div class="stat-label">Project Support Availability</div>
+		</div>
+		</div>
+		</div>
+
       </div>
     </div>
   </section>
@@ -473,7 +521,7 @@
                   <div class="icon-tile" aria-hidden="true">🎓</div>
                   <div>
                     <div class="fw-bold">Industry Training</div>
-                    <div class="text-muted-gn">Hands-on learning in .NET, Java, Angular, and React.</div>
+                    <div class="text-muted-gn">Hands-on learning in .NET, Angular, and React.</div>
                   </div>
                 </div>
               </div>
@@ -519,16 +567,15 @@
 
         <div class="col-lg-5">
           <div class="video-box p-2 h-100">
-            <div class="ratio ratio-16x9 rounded">
-              <!-- Use a known embeddable video. Replace VIDEO_ID with your embeddable ID when ready. -->
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/aFNFVANQ1aY"
-                title="GnanSoft Intro Video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-              </iframe>
-            </div>
-
+			<div class="ratio ratio-16x9">
+			  <iframe
+				src="https://www.youtube-nocookie.com/embed/boFsyYMiD_4"
+				title="GnanSoft Intro Video"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				allowfullscreen>
+			  </iframe>
+			</div>
             <div class="p-3">
               <div class="fw-bold">Quick Intro</div>
               <div class="text-muted-gn">
@@ -569,7 +616,7 @@
               <h3 class="h5 fw-bold mb-0">Certification Support</h3>
             </div>
             <p class="mb-0 text-muted-gn">
-              End-to-end guidance for <strong>Azure, AWS, Java, .NET</strong> and more—from exam registration to final success.
+              End-to-end guidance for <strong>Azure, AWS, DotNet</strong> and more—from exam registration to final success.
             </p>
           </div>
         </div>
@@ -612,37 +659,49 @@
         Practical training with real examples, guided learning, and a clear path to interviews and certifications.
       </p>
 
-      <div class="row g-4 justify-content-center">
-        <div class="col-12 col-md-4">
-          <div class="card-clean p-4 h-100 text-center">
-            <div class="icon-tile mx-auto mb-3" aria-hidden="true">☕</div>
-            <h3 class="h5 fw-bold">Java</h3>
-            <p class="text-muted-gn mb-0">
-              Core Java, Spring Boot, REST APIs, and enterprise-level application development.
-            </p>
-          </div>
-        </div>
+<div class="row g-4 justify-content-center">
 
-        <div class="col-12 col-md-4">
-          <div class="card-clean p-4 h-100 text-center">
-            <div class="icon-tile mx-auto mb-3" aria-hidden="true">🧠</div>
-            <h3 class="h5 fw-bold">.NET</h3>
-            <p class="text-muted-gn mb-0">
-              C#, Web APIs, microservices, clean architecture fundamentals, and production-ready patterns.
-            </p>
-          </div>
-        </div>
+  <!-- .NET -->
+  <div class="col-12 col-md-4">
+    <div class="card-clean p-4 h-100 text-center">
+      <div class="icon-tile mx-auto mb-3" aria-hidden="true">🧠</div>
+      <h3 class="h5 fw-bold">.NET Development</h3>
+      <p class="text-muted-gn mb-0">
+        Master C#, ASP.NET Core, Web APIs, microservices architecture, 
+        clean architecture principles, and enterprise-grade backend 
+        development used in real-world production systems.
+      </p>
+    </div>
+  </div>
 
-        <div class="col-12 col-md-4">
-          <div class="card-clean p-4 h-100 text-center">
-            <div class="icon-tile mx-auto mb-3" aria-hidden="true">🌐</div>
-            <h3 class="h5 fw-bold">Angular & React</h3>
-            <p class="text-muted-gn mb-0">
-              Build modern UIs with best practices, component patterns, and real-world application workflows.
-            </p>
-          </div>
-        </div>
-      </div>
+  <!-- Angular / React -->
+  <div class="col-12 col-md-4">
+    <div class="card-clean p-4 h-100 text-center">
+      <div class="icon-tile mx-auto mb-3" aria-hidden="true">🌐</div>
+      <h3 class="h5 fw-bold">Angular & React</h3>
+      <p class="text-muted-gn mb-0">
+        Build scalable modern web applications using Angular and React 
+        with component-driven architecture, state management, REST API 
+        integration, and performance optimization techniques.
+      </p>
+    </div>
+  </div>
+
+  <!-- Cloud -->
+  <div class="col-12 col-md-4">
+    <div class="card-clean p-4 h-100 text-center">
+      <div class="icon-tile mx-auto mb-3" aria-hidden="true">☁️</div>
+      <h3 class="h5 fw-bold">Cloud (Azure & AWS)</h3>
+      <p class="text-muted-gn mb-0">
+        Learn to design, deploy, and scale cloud-native applications 
+        using Microsoft Azure and AWS services including Functions, 
+        Storage, CI/CD pipelines, serverless architecture, and 
+        enterprise cloud best practices.
+      </p>
+    </div>
+  </div>
+
+</div>
     </div>
   </section>
 
@@ -788,6 +847,23 @@
     }, { threshold: 0.25 });
 
     counters.forEach(c => observer.observe(c));
+  
+// =========================
+// Website Visit Counter
+// =========================
+function updateVisitCounter() {
+  let visits = localStorage.getItem("gnansoft_visits");
+  if (!visits) {
+    visits = 1000;
+  } else {
+    visits = parseInt(visits) + 1;
+  }
+  localStorage.setItem("gnansoft_visits", visits);
+  const el = document.getElementById("visitCounter");
+  if (el) el.textContent = parseInt(visits).toLocaleString();
+}
+updateVisitCounter();
+
   </script>
 </body>
 </html>
